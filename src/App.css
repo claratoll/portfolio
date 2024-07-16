@@ -1,0 +1,78 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+h2,
+a {
+  color: #a987e9;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
+
+.tabataimages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.tabataimages img {
+  max-width: 100%;
+  height: auto;
+}
+
+.background {
+  background-size: cover;
+  background-position: center;
+  padding: 4rem;
+  background-attachment: fixed;
+}
+
+button {
+  background-color: #f8f9fa;
+  border: #f8f9fa;
+  color: #3c4043;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: gray;
+}
+
+button:focus {
+  background-color: #a987e9;
+}
+
+.languagebuttons {
+  background-color: aliceblue;
+  padding: 30px;
+}
