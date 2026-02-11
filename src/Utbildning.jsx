@@ -1,18 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/prop-types */
 import { useTranslation } from 'react-i18next';
 import background from './assets/coffee.png';
 
-const Utbildning = () => {
+const Utbildning = ({ isOpen, onToggle }) => {
   const { t } = useTranslation();
 
   return (
     <div
-      className='background'
+      className='background widget'
+      onClick={onToggle}
       style={{
         backgroundImage: `url(${background})`,
       }}
     >
       <h2>{t('Education')}</h2>
+      {isOpen && (<div>
       <p>{t('examen')}</p>
       <p>
         {t('language')}{' '}
@@ -28,6 +31,9 @@ const Utbildning = () => {
         {t('othereducation')}{' '}
         <a href='https://claratoll.se/mina-utbildningar/'> {t('här')}</a>.
       </p>
+
+      </div>)}
+      <p></p>
     </div>
   );
 };

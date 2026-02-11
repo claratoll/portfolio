@@ -20,13 +20,6 @@ const Intro = () => {
         {t('membership')}{' '}
         <a href='https://strongandhappy.se'>strongandhappy.se</a>
       </p>
-      <h2>{t('uppdrag')}</h2>
-      <p>{t('app')}</p>
-      <p>
-        {t('wordpress')}{' '}
-        <a href='https://strongandhappy.se'>strongandhappy.se</a>.
-      </p>
-      <p> {t('reactjs')}</p>
     </div>
   );
 };

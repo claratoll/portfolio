@@ -8,23 +8,30 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
-  text-align: center;
   min-height: 100vh;
+  text-align: center;
 }
+
 
 h2 {
   font-size: 2rem;
+  padding-top: 2rem;
+  margin: 0;
 }
 
 p {
   font-size: 1.2rem;
+  padding: 0.5rem 2rem 2rem;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h2,
@@ -33,26 +40,54 @@ a {
   text-decoration: none;
 }
 
+p, a {
+  padding-bottom: 2rem;
+}
+
 a:hover {
   color: black;
 }
 
-.tabataimages {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  padding: 2rem;
+.heightimage {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.tabataimages img {
-  max-width: 100%;
+.heightimage img {
+  width: 100%;
+  max-width: 25%;
   height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+
+.heightimage img:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.wideimage {
+padding: 30px;
+}
+
+.wideimage img {
+  max-width: 90%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.wideimage img:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .background {
   background-size: cover;
   background-position: center;
-  padding: 4rem;
   background-attachment: fixed;
 }
 

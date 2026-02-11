@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
+import background from './assets/strongandhappy.png';
 import { useTranslation } from 'react-i18next';
-import background from './assets/desk.png';
 
-const Kontakt = ({ isOpen, onToggle }) => {
+const StrongAndHappy = ({ isOpen, onToggle }) => {
   const { t } = useTranslation();
 
   return (
@@ -14,17 +14,24 @@ const Kontakt = ({ isOpen, onToggle }) => {
         backgroundImage: `url(${background})`,
       }}
     >
-      <h2> {t('Kontakt')}</h2>
-      {isOpen && (<div>
+      <h2>StrongAndHappy.se</h2>
 
-      <button onClick={() => (window.location = 'mailto:info@claratoll.se')}>
-        {t('emailme')}
-      </button>
-      <p> {t('updated')}</p>
+      {isOpen && (<div>
+        <p>{t('strongandhappy')}</p>
+        <p>{t('strongandhappy2')}</p>
+        <p>
+
+          <a href='https://strongandhappy.se/'>
+            {' '}
+            strongandhappy.se
+          </a>
+          .
+        </p>
+
       </div>)}
       <p></p>
     </div>
   );
 };
 
-export default Kontakt;
+export default StrongAndHappy;
